@@ -25,21 +25,19 @@ export default function HeroSection() {
         <Stack
           as={Box}
           textAlign={'center'}
-          spacing={{ base: 8, md: 14 }}
-          py={{ base: 20, md: 36 }}>
+          spacing={{ base: 8, md: 10 }}
+          py={{ base: 10, md: 10 }}>
           <Heading
             fontWeight={600}
             fontSize={{ base: '2xl', sm: '4xl', md: '6xl' }}
             lineHeight={'110%'}>
-            Make money from <br />
-            <Text as={'span'} color={'green.400'}>
-              your audience
+            Certified Web 3.0 and Metaverse Developer <br />
+            <Text as={'span'} color={'green.400'} fontWeight={300}>
+              A Nationwide Program in Karachi, Lahore, Islamabad, and Peshawar
             </Text>
           </Heading>
           <Text color={'gray.500'}>
-            Monetize your content by charging your most loyal readers and reward
-            them loyalty points. Give back to your loyal readers by granting
-            them access to your pre-releases and sneak-peaks.
+          The Future of the Web is Web 3.0, Metaverse, and Edge Computing. Panaverse DAO is a movement to spread these technolgies globally. It is community of Web 3 and Metaverse developers, designers, trainers, startup founders and service providers.
           </Text>
           <Stack
             direction={'column'}
@@ -52,6 +50,7 @@ export default function HeroSection() {
               bg={'green.400'}
               rounded={'full'}
               px={6}
+              as={"a"} href="https://www.piaic.org" target={'_blank'}
               _hover={{
                 bg: 'green.500',
               }}>
@@ -76,7 +75,7 @@ export default function HeroSection() {
                 right={'-125px'}
                 top={'-15px'}
                 transform={'rotate(10deg)'}>
-                Starting at $15/mo
+                Starting at $02/mo
               </Text>
             </Box>
           </Stack>

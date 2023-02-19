@@ -54,12 +54,15 @@ import {
               p={2}
               alignSelf={'flex-start'}
               rounded={'md'}>
-              Our Story
+              Our Aim
             </Text>
-            <Heading>A digital Product design agency</Heading>
+            <Heading>A Digital Transformation Agency</Heading>
             <Text color={'gray.500'} fontSize={'lg'}>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-              nonumy eirmod tempor invidunt ut labore
+            The graduates of this program will own products (Full-Stack App Templates, AR and VR Experiences, and APIs) 
+            that are marketed globally by the Panaverse DAO and, if they like, will also be able to start off by offering 
+            services at a rate of $50 per hour ($96,000 per year). This would give Pakistani professionals and students 
+            a fantastic opportunity to better their financial situation while also giving the economy a much-needed boost 
+            by expanding software exports.
             </Text>
             <Stack
               spacing={4}
@@ -73,19 +76,19 @@ import {
                   <Icon as={IoAnalyticsSharp} color={'yellow.500'} w={5} h={5} />
                 }
                 iconBg={useColorModeValue('yellow.100', 'yellow.900')}
-                text={'Business Planning'}
+                text={'Business Planning, Analysis and Execution'}
               />
               <Feature
                 icon={<Icon as={IoLogoBitcoin} color={'green.500'} w={5} h={5} />}
                 iconBg={useColorModeValue('green.100', 'green.900')}
-                text={'Financial Planning'}
+                text={'Borderless Financial Independence'}
               />
               <Feature
                 icon={
                   <Icon as={IoSearchSharp} color={'purple.500'} w={5} h={5} />
                 }
                 iconBg={useColorModeValue('purple.100', 'purple.900')}
-                text={'Market Analysis'}
+                text={'Technical Mastery in Cutting Edge Technologies'}
               />
             </Stack>
           </Stack>

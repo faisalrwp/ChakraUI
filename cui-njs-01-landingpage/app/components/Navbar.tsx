@@ -7,6 +7,7 @@ import {
     Stack,
     Collapse,
     Icon,
+    Image,
     Link,
     Popover,
     PopoverTrigger,
@@ -14,6 +15,8 @@ import {
     useColorModeValue,
     useBreakpointValue,
     useDisclosure,
+    ColorMode,
+    useColorMode,useColorModePreference,  
   } from '@chakra-ui/react';
   import {
     HamburgerIcon,
@@ -22,14 +25,28 @@ import {
     ChevronRightIcon,
   } from '@chakra-ui/icons';
   
+
+
+
+
   export default function Navbar() {
     const { isOpen, onToggle } = useDisclosure();
-  
+    const { toggleColorMode } = useColorMode();
+    function Example() {
+      const { colorMode, toggleColorMode } = useColorMode()
+      return (
+        <header>
+          <Button onClick={toggleColorMode}>
+            Toggle {colorMode === 'light' ? 'Dark' : 'Light'}
+          </Button>
+        </header>
+      )
+    }
     return (
       <Box>
         <Flex
-          bg={useColorModeValue('white', 'gray.800')}
-          color={useColorModeValue('gray.600', 'white')}
+          bg={useColorModeValue('green.800', 'gray.800')}
+          color={useColorModeValue('white', 'white')}
           minH={'60px'}
           py={{ base: 2 }}
           px={{ base: 4 }}
@@ -54,8 +71,8 @@ import {
             <Text
               textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
               fontFamily={'heading'}
-              color={useColorModeValue('gray.800', 'white')}>
-              <Button as={"a"} href="/" variant="link"> Logo </Button>
+              color={useColorModeValue('white', 'white')}>
+              <Button as={"a"} href="/" variant="link"> <Image src='/panaverse.png'  width="8" height="8" alt='Logo' /> </Button>
             </Text>
   
             <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
@@ -82,12 +99,25 @@ import {
               fontSize={'sm'}
               fontWeight={600}
               color={'white'}
-              bg={'pink.400'}
+              bg={useColorModeValue('green.400','gray.400')}
               href="/signup"
               _hover={{
-                bg: 'pink.300',
+                bg: 'blue.300',
               }}>
               Sign Up
+            </Button>
+            <Button
+              as={'a'}
+              display={{ base: 'none', md: 'inline-flex' }}
+              fontSize={'sm'}
+              fontWeight={600}
+              color={'white'}
+              bg={useColorModeValue('green.400','gray.400')}
+              onClick={toggleColorMode}
+              _hover={{
+                bg: 'blue.300',
+              }}>
+              Color
             </Button>
           </Stack>
         </Flex>
@@ -100,9 +130,9 @@ import {
   }
   
   const DesktopNav = () => {
-    const linkColor = useColorModeValue('gray.600', 'gray.200');
-    const linkHoverColor = useColorModeValue('gray.800', 'white');
-    const popoverContentBgColor = useColorModeValue('white', 'gray.800');
+    const linkColor = useColorModeValue('green.100', 'gray.100');
+    const linkHoverColor = useColorModeValue('green.300', 'gray.300');
+    const popoverContentBgColor = useColorModeValue('green.500', 'gray.500');
   
     return (
       <Stack direction={'row'} spacing={4}>
@@ -154,12 +184,12 @@ import {
         display={'block'}
         p={2}
         rounded={'md'}
-        _hover={{ bg: useColorModeValue('pink.50', 'gray.900') }}>
+        _hover={{ bg: useColorModeValue('green.50', 'gray.900') }}>
         <Stack direction={'row'} align={'center'}>
           <Box>
             <Text
               transition={'all .3s ease'}
-              _groupHover={{ color: 'pink.400' }}
+              _groupHover={{ color: 'green.400' }}
               fontWeight={500}>
               {label}
             </Text>
@@ -173,7 +203,7 @@ import {
             justify={'flex-end'}
             align={'center'}
             flex={1}>
-            <Icon color={'pink.400'} w={5} h={5} as={ChevronRightIcon} />
+            <Icon color={'green.400'} w={5} h={5} as={ChevronRightIcon} />
           </Flex>
         </Stack>
       </Link>
@@ -252,41 +282,53 @@ import {
   
   const NAV_ITEMS: Array<NavItem> = [
     {
-      label: 'Inspiration',
+      label: 'How It Works',
+      href: '/how',
+    },
+    {
+      label: 'Courses',
       children: [
         {
-          label: 'Explore Design Work',
-          subLabel: 'Trending Design to inspire you',
+          label: 'Artificial Intelligence',
           href: '#',
         },
         {
-          label: 'New & Noteworthy',
-          subLabel: 'Up-and-coming Designers',
+          label: 'Cloud Native Computing',
+          href: '#',
+        },
+        {
+          label: 'Block Chain',
+          href: '#',
+        },
+        {
+          label: 'Internet of Things',
+          href: '#',
+        },
+        {
+          label: 'Web 3.0 & Metaverse',
+          href: '#',
+        }
+      ],
+    },
+    {
+      label: 'About Us',
+      children: [
+        {
+          label: 'The President',
+          href: '#',
+        },
+        {
+          label: 'The Team',
           href: '#',
         },
       ],
     },
     {
-      label: 'Find Work',
-      children: [
-        {
-          label: 'Job Board',
-          subLabel: 'Find your dream design job',
-          href: '#',
-        },
-        {
-          label: 'Freelance Projects',
-          subLabel: 'An exclusive list for contract work',
-          href: '#',
-        },
-      ],
-    },
-    {
-      label: 'Learn Design',
+      label: 'Women In Tech',
       href: '#',
     },
     {
-      label: 'Hire Designers',
-      href: '#',
+      label: 'Contact Us',
+      href: '/contact',
     },
   ];

@@ -65,18 +65,15 @@ const TestimonialText = ({ children }: { children: ReactNode }) => {
 
 const TestimonialAvatar = ({
   src,
-  name,
   title,
 }: {
   src: string;
-  name: string;
   title: string;
 }) => {
   return (
     <Flex align={'center'} mt={8} direction={'column'}>
       <Avatar src={src}  mb={2} />
       <Stack spacing={-1} align={'center'}>
-        <Text fontWeight={600}>{name}</Text>
         <Text fontSize={'sm'} color={useColorModeValue('gray.600', 'gray.400')}>
           {title}
         </Text>
@@ -88,64 +85,102 @@ const TestimonialAvatar = ({
 export default function Testimonials() {
   return (
     <Box bg={useColorModeValue('gray.100', 'gray.700')}>
-      <Container maxW={'7xl'} py={16} as={Stack} spacing={12}>
+      <Container maxW={'7xl'} py={2} as={Stack} spacing={5}>
         <Stack spacing={0} align={'center'}>
-          <Heading>Our Clients Speak</Heading>
-          <Text>We have been working with clients around the world</Text>
+          <Heading>Our Courses Speaks For Themselves</Heading>
+          <Text color={'green.400'}>We have been teaching next gen technologies to Students around every corner PAKISTAN in Onsite/Online mode.</Text>
         </Stack>
         <Stack
           direction={{ base: 'column', md: 'row' }}
-          spacing={{ base: 10, md: 4, lg: 10 }}>
+          spacing={{ base: 2, md: 3, lg: 4 }}>
           <Testimonial>
             <TestimonialContent>
-              <TestimonialHeading>Efficient Collaborating</TestimonialHeading>
+              <TestimonialHeading>Artificial Intelligence</TestimonialHeading>
               <TestimonialText>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor
-                neque sed imperdiet nibh lectus feugiat nunc sem.
+              A one year AI program designed for getting Pakistan ready 
+              for the new era of computing enabled by the rise of AI.
               </TestimonialText>
             </TestimonialContent>
             <TestimonialAvatar
-              src={
-                'https://images.unsplash.com/photo-1586297135537-94bc9ba060aa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80'
-              }
-              name={'Jane Cooper'}
-              title={'CEO at ABC Corporation'}
+              src={'/ai.png'}
+              title={'01 Year AI Program'}
             />
           </Testimonial>
           <Testimonial>
             <TestimonialContent>
-              <TestimonialHeading>Intuitive Design</TestimonialHeading>
+              <TestimonialHeading>Cloud Native Computing</TestimonialHeading>
               <TestimonialText>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor
-                neque sed imperdiet nibh lectus feugiat nunc sem.
+              A one  year cloud  computing program designed for getting Pakistan ready 
+              for the new era of micro-services and multi-cloud native computing.
               </TestimonialText>
             </TestimonialContent>
             <TestimonialAvatar
-              src={
-                'https://images.unsplash.com/photo-1586297135537-94bc9ba060aa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80'
-              }
-              name={'Jane Cooper'}
-              title={'CEO at ABC Corporation'}
+              src={'/cloudcomp.png'}
+              title={'01 Year CNC Program'}
             />
           </Testimonial>
           <Testimonial>
             <TestimonialContent>
-              <TestimonialHeading>Mindblowing Service</TestimonialHeading>
+              <TestimonialHeading>Block Chain</TestimonialHeading>
               <TestimonialText>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor
-                neque sed imperdiet nibh lectus feugiat nunc sem.
+              A one year blockchain program designed for getting Pakistan ready 
+              for the new era of blockchain, fintech and smart contracts 
               </TestimonialText>
             </TestimonialContent>
             <TestimonialAvatar
               src={
-                'https://images.unsplash.com/photo-1586297135537-94bc9ba060aa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80'
-              }
-              name={'Jane Cooper'}
-              title={'CEO at ABC Corporation'}
+                '/bc.png'}
+              title={'01 Year BC Program'}
             />
           </Testimonial>
         </Stack>
       </Container>
-    </Box>
+
+<Container maxW={'7xl'} py={2} as={Stack} spacing={1}>
+  <Stack
+    direction={{ base: 'column', md: 'row' }}
+    spacing={{ base: 2, md: 3, lg: 4 }}>
+    <Testimonial>
+      <TestimonialContent>
+        <TestimonialHeading>Internet of Things</TestimonialHeading>
+        <TestimonialText>
+        A fifteen months IOT and AI program designed for getting Pakistan ready
+        for the new era of Internet of Things IoT and AI. 
+        </TestimonialText>
+      </TestimonialContent>
+      <TestimonialAvatar
+        src={'/iot.png'}
+        title={'01 Year IoT Program'}
+      />
+    </Testimonial>
+    <Testimonial>
+      <TestimonialContent>
+        <TestimonialHeading>Web 3.0 and Metaverse</TestimonialHeading>
+        <TestimonialText>
+        A one year Web 3.0 and Metaverse program designed for getting Pakistan ready
+        for the new era of next generation Web 3.0 technologies. 
+        </TestimonialText>
+      </TestimonialContent>
+      <TestimonialAvatar
+        src={'web3.0.png'}
+        title={'01 Year Web3.0 Program'}
+      />
+    </Testimonial>
+    <Testimonial>
+      <TestimonialContent>
+        <TestimonialHeading>Career Management</TestimonialHeading>
+        <TestimonialText>
+        Extensive guidance, practical support and management services for the students of these programs
+        for making them learn and earn at the same time.
+        </TestimonialText>
+      </TestimonialContent>
+      <TestimonialAvatar
+        src={'/career.png'}
+        title={'Career Counceling and Support'}
+      />
+    </Testimonial>
+  </Stack>
+</Container>
+</Box>
   );
 }
