@@ -37,7 +37,7 @@ import { FaFacebook } from 'react-icons/fa';
             background={useColorModeValue('green.800', 'gray.600')}
             color="white"
             borderRadius="lg"
-            m={{ sm: 1, md: 2, lg: 3 }}
+            m={{ sm: 2, md: 4, lg: 7 }}
             p={{ sm: 3, md: 3, lg: 5 }}>
             <Box p={4}>
               <Wrap spacing={{ base: 20, sm: 3, md: 5, lg: 20 }}>
@@ -56,7 +56,7 @@ import { FaFacebook } from 'react-icons/fa';
                           variant="ghost"
                           color="#DCE2FF"
                           _hover={{ border: '2px solid ' }}
-                          leftIcon={<MdPhone size="20px" />}>
+                          leftIcon={<MdPhone size="20px" color={useColorModeValue('green.500', 'blue.500')} />}>
                           +92-308-2220203 
                         </Button>
                         
@@ -67,7 +67,7 @@ import { FaFacebook } from 'react-icons/fa';
                           variant="ghost"
                           color="#DCE2FF"
                           _hover={{ border: '2px solid #1C6FEB' }}
-                          leftIcon={<MdEmail  color="#1970F1" size="20px" />}>
+                          leftIcon={<MdEmail  color={useColorModeValue('green.500', 'blue.500')} size="20px" />}>
                           education@piaic.org
                         </Button>
                         <Button
@@ -77,7 +77,7 @@ import { FaFacebook } from 'react-icons/fa';
                           variant="ghost"
                           color="#DCE2FF"
                           _hover={{ border: '2px solid #1C6FEB' }}
-                          leftIcon={<MdLocationOn color="#1970F1" size="20px" />}>
+                          leftIcon={<MdLocationOn size="20px" />}>
                           Karachi, Pakistan
                         </Button>
                       </VStack>
@@ -122,7 +122,7 @@ import { FaFacebook } from 'react-icons/fa';
                         <FormControl id="name" float="right">
                           <Button
                             variant="solid"
-                            bg="#0D74FF"
+                            bg={useColorModeValue('green.600', 'blue.600')}
                             color="white"
                             _hover={{}}>
                             Send Message

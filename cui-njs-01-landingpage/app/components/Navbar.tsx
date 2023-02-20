@@ -18,11 +18,13 @@ import {
     ColorMode,
     useColorMode,useColorModePreference,  
   } from '@chakra-ui/react';
+
   import {
     HamburgerIcon,
     CloseIcon,
     ChevronDownIcon,
     ChevronRightIcon,
+    SunIcon,
   } from '@chakra-ui/icons';
   
 
@@ -106,19 +108,12 @@ import {
               }}>
               Sign Up
             </Button>
-            <Button
-              as={'a'}
+            <IconButton aria-label='Color' icon={<SunIcon />} 
               display={{ base: 'none', md: 'inline-flex' }}
               fontSize={'sm'}
               fontWeight={600}
-              color={'white'}
-              bg={useColorModeValue('green.400','gray.400')}
-              onClick={toggleColorMode}
-              _hover={{
-                bg: 'blue.300',
-              }}>
-              Color
-            </Button>
+              bg={useColorModeValue('green.600','gray.600')}
+              onClick={toggleColorMode} />
           </Stack>
         </Flex>
   
@@ -290,23 +285,23 @@ import {
       children: [
         {
           label: 'Artificial Intelligence',
-          href: '#',
+          href: '/cai',
         },
         {
           label: 'Cloud Native Computing',
-          href: '#',
+          href: '/ccc',
         },
         {
           label: 'Block Chain',
-          href: '#',
+          href: '/cbc',
         },
         {
           label: 'Internet of Things',
-          href: '#',
+          href: 'cio',
         },
         {
           label: 'Web 3.0 & Metaverse',
-          href: '#',
+          href: 'cw3',
         }
       ],
     },
